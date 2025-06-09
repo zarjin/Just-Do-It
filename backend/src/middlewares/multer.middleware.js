@@ -10,14 +10,4 @@ const userStorage = new CloudinaryStorage({
   },
 });
 
-const messageStorage = new CloudinaryStorage({
-  cloudinary: cloudinary,
-  params: {
-    folder: "messages",
-    allowed_formats: ["jpg", "png", "jpeg"],
-  },
-});
-
 export const userUplaod = multer({ storage: userStorage });
-
-export const messageUpload = multer({ storage: messageStorage });
