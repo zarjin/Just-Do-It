@@ -7,6 +7,6 @@ const messageRoutes = express.Router();
 
 messageRoutes.post("/send-message/:receiver", Authorization, sendMessage);
 
-messageRoutes.get("/receiver-message:receiver", Authorization, getMessages);
+messageRoutes.get("/get-messages/:receiver", Authorization, getMessages);
 
 export default messageRoutes;
